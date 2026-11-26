@@ -64,7 +64,6 @@ export default function VehiclePositionsScreen() {
                 headers: { 
                     'Authorization': `Session token="${user?.token}"`, 
                     'Accept': 'application/json',
-                    'Content-Type': 'application/json' 
                 },
             });
 

@@ -57,7 +57,6 @@ export default function EditNotificationsScreen() {
         method: 'GET',
         headers: {
           'Authorization': `Session token="${user?.token}"`,
-          'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
       });
@@ -77,7 +76,6 @@ export default function EditNotificationsScreen() {
         method: 'POST',
         headers: {
           'Authorization': `Session token="${user?.token}"`,
-          'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify(settings),

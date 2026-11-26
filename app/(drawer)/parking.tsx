@@ -25,7 +25,6 @@ export default function ParkingScreen() {
           headers: { 
             'Authorization': `Session token="${user?.token}"`,
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
           },
         });
         const data = await response.json();

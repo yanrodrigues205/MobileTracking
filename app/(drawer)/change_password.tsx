@@ -83,7 +83,6 @@ export default function ChangePasswordScreen() {
       const response = await fetch('https://satfleet.satcompany.app/api/mobile/v3/users/password_reset', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
           'Authorization': `Session token="${user.token}"`,
           'Accept': 'application/json'
         },

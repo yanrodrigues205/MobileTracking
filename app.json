@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "satfleet_mobile",
+    "name": "SatFleet",
     "slug": "satfleet_mobile",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/icon_initial.png",
     "scheme": "satfleetmobile",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -15,15 +15,14 @@
         "googleMapsApiKey": "AIzaSyC8IoCChQObXKcSAmhdtG45b-rJ2XQe6IA"
       },
       "infoPlist": {
-        "NSLocationWhenInUseUsageDescription": "Precisamos da sua localização para mostrar o veículo no mapa."
-      } 
+        "NSLocationWhenInUseUsageDescription": "Precisamos da sua localização para mostrar o veículo no mapa.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/images/icon.png",
-        "backgroundImage": "./assets/images/icon.png",
-        "monochromeImage": "./assets/images/icon.png"
+        "foregroundImage": "./assets/images/icon_initial.png"
       },
       "config": {
         "googleMaps": {
@@ -36,18 +35,20 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/icon.png"
+      "favicon": "./assets/images/icon_initial.png"
     },
     "plugins": [
       "expo-router",
+      "./withSatNexus.js",
+      "./withAndroidVerifiedToken.js",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/icon.png",
-          "imageWidth": 200,
-          "resizeMode": "contain",
+          "image": "./assets/images/icon_initial.png",
           "backgroundColor": "#ffffff",
+          "resizeMode": "contain",
           "dark": {
+            "image": "./assets/images/icon_initial.png",
             "backgroundColor": "#000000"
           }
         }
@@ -64,5 +65,8 @@
         "projectId": "861d8eba-ba1b-46b8-bf53-5aaee28e30bf"
       }
     }
+  },
+  "cli": {
+    "appVersionSource": "remote"
   }
 }

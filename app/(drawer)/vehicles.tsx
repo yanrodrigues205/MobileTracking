@@ -58,7 +58,6 @@ export default function VehiclesScreen() {
         method: 'GET',
         headers: {
           'Accept': 'application/json',
-          'Content-Type': 'application/json',
           'Authorization': `Session token="${user?.token}"`,
         },
       });
